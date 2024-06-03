@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import EmployeeChoice from '../components/EmployeeChoice';
+import AdminMenuEdit from '../components/AdminMenuEdit';
 
 function Admin() {
   const [date, setDate] = useState('');
@@ -60,7 +61,12 @@ function Admin() {
             </button>
           </form>
         </div>
-        <div>
+        <div className="col-md-6"> {/* Adjust the size accordingly */}
+          <AdminMenuEdit />
+        </div>
+      </div>
+      <div className="row justify-content-center mt-3">
+        <div className="col-md-6">
           <EmployeeChoice />
         </div>
       </div>

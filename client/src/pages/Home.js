@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Assuming you are using React Router for navigation
 import 'bootstrap/dist/css/bootstrap.min.css';
 import officeimage from '../../src/img/office.jpg';
+import AdminMenuEdit from '../components/AdminMenuEdit';
 
 const HomePage = () => {
   const [password, setPassword] = useState('');
@@ -127,6 +128,7 @@ const HomePage = () => {
           style={{ zIndex: '1040' }}
         ></div>
       )}
+      <AdminMenuEdit/>
     </div>
   );
 };
