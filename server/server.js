@@ -28,10 +28,15 @@ app.get('/', (req, res) => {
 });
 
 // Sync database and start server
-sequelize.sync().then(() => {
-  app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+sequelize
+  .sync({ alter: true })
+  .then(() => {
+    // Use { alter: true } to update the schema
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error('Unable to connect to the database:', err);
   });
-}).catch(err => {
-  console.error('Unable to connect to the database:', err);
-});
+

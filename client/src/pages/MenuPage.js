@@ -3,30 +3,21 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MenuPage = () => {
-  // State to store menu data
   const [menu, setMenu] = useState([]);
-  // State to handle loading state
   const [loading, setLoading] = useState(true);
-  // State to handle error state
   const [error, setError] = useState(null);
-  // State to track expanded rows
   const [expandedRow, setExpandedRow] = useState(null);
-  // State to show the form for making a choice
   const [showForm, setShowForm] = useState(false);
-  // State to capture the employee's name and selected options
   const [employeeName, setEmployeeName] = useState('');
   const [selectedOptions, setSelectedOptions] = useState([]);
-  // State to track today's menu
   const [todaysMenu, setTodaysMenu] = useState(null);
 
   useEffect(() => {
-    // Fetch menu data from backend
     const fetchMenu = async () => {
       try {
         const response = await axios.get('http://localhost:5000/menu/view');
         setMenu(response.data);
         setLoading(false);
-        // Find today's menu
         const today = new Date().toISOString().split('T')[0];
         const todayMenu = response.data.find((item) => item.date === today);
         setTodaysMenu(todayMenu);
@@ -58,9 +49,10 @@ const MenuPage = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/employee_choice', {
+      await axios.post('http://localhost:5000/employee/select', {
         name: employeeName,
-        choices: selectedOptions,
+        lunchChoices: selectedOptions,
+        date: new Date().toISOString().split('T')[0], // Use today's date
       });
       alert('Choices submitted successfully!');
       setShowForm(false);
