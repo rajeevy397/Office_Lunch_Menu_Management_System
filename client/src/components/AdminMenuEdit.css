@@ -1,0 +1,49 @@
+/* AdminMenuEdit.css */
+
+.container {
+  border: 1px solid #ddd; /* Add a border */
+  border-radius: 10px; /* Add some border radius for a softer look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+  padding: 20px; /* Add some padding */
+  margin-top: 20px; /* Adjust the margin */
+}
+
+.card {
+  border: none; /* Remove border for the card */
+}
+
+.card-title {
+  color: #333; /* Adjust title color */
+  font-size: 1.25rem; /* Adjust title font size */
+}
+
+.btn {
+  /* Customize button styles */
+  border-radius: 5px;
+}
+
+.btn-success {
+  background-color: #28a745; /* Green color for success button */
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Gray color for secondary button */
+}
+
+.table {
+  border: none; /* Remove border for the table */
+}
+
+.table th,
+.table td {
+  border: none; /* Remove border for table cells */
+}
+
+.table th {
+  background-color: #f8f9fa; /* Light gray background for table header */
+  color: #333; /* Adjust table header text color */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa; /* Alternate row background color */
+}

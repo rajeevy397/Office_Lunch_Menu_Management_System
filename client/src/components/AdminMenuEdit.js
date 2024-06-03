@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './AdminMenuEdit.css'
 
 const AdminMenuEdit = () => {
   const [menu, setMenu] = useState([]);
@@ -115,7 +116,11 @@ const AdminMenuEdit = () => {
             {menu.map((item) => (
               <tr key={item.id}>
                 <td>{item.date}</td>
-                <td>{item.options.join(', ')}</td>
+                <td>
+                  {Array.isArray(item.options)
+                    ? item.options.join(', ')
+                    : item.options}
+                </td>
                 <td>
                   <button
                     className="btn btn-warning mr-2"
