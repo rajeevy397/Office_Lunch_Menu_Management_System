@@ -170,6 +170,26 @@ To view the employee lunch choices, navigate to the `/employees` route. The list
 5. Push to the branch (`git push origin feature-branch`).
 6. Open a Pull Request.
 
+
+## Demo
+
+Watch a demo of the application here:
+
+[![Demo Video](https://img.youtube.com/vi/X3wkWX_XlsM/0.jpg)](https://youtu.be/X3wkWX_XlsM)
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
